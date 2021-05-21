@@ -70,4 +70,71 @@ public class Controller {
         }
         return (grades);
     }
+
+    public double getRubricAverage(String rubric) throws Exception {
+        for (int i = 0; i <= _rubrics.size(); i = i + 1) {
+            if (rubric.equals(_rubrics.get(i)._name)) {
+                return(_rubrics.get(i).getRubricAverage());
+            }
+        }
+        throw new Exception("Rubric not found");
+    }
+
+    public double getCriterionAverage(String rubric, String criterion) throws Exception {
+        for (int i = 0; i <= _rubrics.size(); i = i + 1) {
+            if (rubric.equals(_rubrics.get(i)._name)) {
+                for (Criterion crit : _rubrics.get(i)._criterions) {
+                    if (criterion.equals(crit._name)) {
+                        return (crit.getAverage());
+                    }
+                }
+            }
+        }
+        throw new Exception("Rubric not found");
+    }
+
+    public double getRubricSD(String rubric) throws Exception {
+        for (int i = 0; i <= _rubrics.size(); i = i + 1) {
+            if (rubric.equals(_rubrics.get(i)._name)) {
+                return(_rubrics.get(i).getRubricStandardDeviation());
+            }
+        }
+        throw new Exception("Rubric not found");
+    }
+
+    public int getRubricMaximumGrade(String rubric) throws Exception {
+        for (int i = 0; i <= _rubrics.size(); i = i + 1) {
+            if (rubric.equals(_rubrics.get(i)._name)) {
+                return(_rubrics.get(i).getMaxGrade());
+            }
+        }
+        throw new Exception("Rubric not found");
+    }
+
+    public int getCriterionMaximumGrade(String rubric, String criterion) throws Exception {
+        for (int i = 0; i <= _rubrics.size(); i = i + 1) {
+            if (rubric.equals(_rubrics.get(i)._name)) {
+                return(_rubrics.get(i).getMaxCriterionGrade(criterion));
+            }
+        }
+        throw new Exception("Rubric not found");
+    }
+
+    public int getRubricMinimumGrade(String rubric) throws Exception {
+        for (int i = 0; i <= _rubrics.size(); i = i + 1) {
+            if (rubric.equals(_rubrics.get(i)._name)) {
+                return(_rubrics.get(i).getMinGrade());
+            }
+        }
+        throw new Exception("Rubric not found");
+    }
+
+    public int getCriterionMinimumGrade(String rubric, String criterion) throws Exception {
+        for (int i = 0; i <= _rubrics.size(); i = i + 1) {
+            if (rubric.equals(_rubrics.get(i)._name)) {
+                return(_rubrics.get(i).getMinCriterionGrade(criterion));
+            }
+        }
+        throw new Exception("Rubric not found");
+    }
 }

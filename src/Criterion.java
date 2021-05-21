@@ -12,4 +12,13 @@ public class Criterion {
     public void addStudentGrade(StudentGrade grade) {
         this._studentGrades.add(grade);
     }
+
+    public double getAverage() throws Exception {
+        int gradesSum = 0;
+
+        for (StudentGrade value : _studentGrades) {
+            gradesSum += value._grade;
+        }
+        return (gradesSum / _studentGrades.size());
+    }
 }
