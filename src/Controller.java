@@ -36,4 +36,20 @@ public class Controller {
             throw new Exception("Rubric not found");
         }
     }
+
+    public void createNewStudentGrade(String rubric, String criterion, String studentName) throws Exception {
+        if (_rubrics.size() == 0) {
+            throw new Exception("No rubric found");
+        }
+        boolean found = false;
+        for (Rubric value : _rubrics) {
+            if (rubric.equals(value._name)) {
+                value.createStudentGrade(criterion, studentName);
+                found = true;
+            }
+        }
+        if (!found) {
+            throw new Exception("Rubric not found");
+        }
+    }
 }
