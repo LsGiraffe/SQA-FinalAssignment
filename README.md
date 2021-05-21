@@ -36,3 +36,6 @@ That gives us a coverage of 100% of the methods :
 <img width="623" alt="Screenshot 2021-05-21 at 16 40 11" src="https://user-images.githubusercontent.com/76775453/119163515-62f1d580-ba53-11eb-8232-f7333d9e67dd.png">
 
 
+**Test coverage tools** helps identify gaps in test coverage by indicating the percentage of methods and line that have been taken into consideration in the tests
+The coverage tool indicates which methods are correctly tested or not, and allows the developer to do not forget to test any part of code
+
