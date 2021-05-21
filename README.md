@@ -44,3 +44,17 @@ The coverage tool indicates which methods are correctly tested or not, and allow
 
 **Test driven development** desribes an iterative and incremental way of developing a project. The code is not oriented on the functional part itself but on the tests, that are written at the same time or prior to the functional code, and that allow the developer to work around it and have a precise idea of what the code should do and not do.
 For example, the commit c7ea35132ed357df87b25a7fce414e62e99015b8 (https://github.com/LsGiraffe/SQA-FinalAssignment/commit/c7ea35132ed357df87b25a7fce414e62e99015b8) of the project, that implement every calculation function, shows that every caculation methodhad its own test method. 100% of the methods have an associated unit tests.
+
+## Code review
+
+During a **code review**, the reviewer should follow some guidelines to check that the code to be merged fits efficiently in the project.
+* The first thing to check is the **architecture**. Most of the serious projects have a defined architecture and it needs to be followed to avoid that the code becomes too complicated.
+* The reviewer also needs to check if the **format guidelines and the coding standards** have been respected.
+* The new code will of course have to be **functionnal, without bugs ans the most possible efficient and fast**
+* The code have to be provided with associated **unit tests** that ensure that evey case scenario is handled and that the code has no leak.
+
+In the pull request https://github.com/LsGiraffe/SQA-FinalAssignment/pull/2 , this checklist have been followed.
+* The architecture have been respected, although it is very basic, every piece of code has been put in the right class and the right folder
+* The code is probably possible to be improved but it remains readable, clean and there is no extensive methods
+* Everything works as requested in the specifications, except the standard deviations
+* All methods are provided with an unit test, 100% of coverage
