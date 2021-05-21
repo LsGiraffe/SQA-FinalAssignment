@@ -11,6 +11,16 @@ Here's an example to help you visualise the problem. Each of the columns is a Cr
 
 The project has been developed in the Intellij Idea IDE, using java16 and junit5
 
+## Team version control
+
+3 additional branches have been created:
+* develop: all the work done in the feature branches is merged to develop
+* features/subClasses: Creation of all the necessary sub classes and creation of some useful methods (associated with task 2)
+* features/controller: Creation of the controller class and creation of all the required methods (associated with task 3)
+
+Once a task is done the associated branch is merged with develop with a pull request
+Once the project is complete and functionnal and all the unit tests are working and effective, the project is pushed on master  
+
 ## Test coverage
 
 The test coverage has been measured by the Intellij integrated coverage tool
