@@ -20,4 +20,20 @@ public class Controller {
     }
 
     public List<Rubric> getAllRubrics() { return this._rubrics; }
+
+    public void addCriterion(String rubric, Criterion criterion) throws Exception {
+        if (_rubrics.size() == 0) {
+            throw new Exception("No rubric found");
+        }
+        boolean found = false;
+        for (Rubric value : _rubrics) {
+            if (rubric.equals(value._name)) {
+                value.addCriterion(criterion);
+                found = true;
+            }
+        }
+        if (!found) {
+            throw new Exception("Rubric not found");
+        }
+    }
 }

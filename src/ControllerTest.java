@@ -30,4 +30,14 @@ class ControllerTest {
         assertEquals("Rubric1", controller._rubrics.get(0)._name);
         assertEquals("Rubric2", controller._rubrics.get(1)._name);
     }
+
+    @org.junit.jupiter.api.Test
+    void addCriterion() throws Exception {
+        controller.addRubric("Rubric1");
+  //      controller.addRubric("Rubric2");
+        assertEquals(0, controller._rubrics.get(0)._criterions.size());
+        controller.addCriterion("Rubric1", new Criterion("Criterion"));
+        assertEquals(1, controller._rubrics.get(0)._criterions.size());
+        assertEquals("Criterion", controller._rubrics.get(0)._criterions.get(0)._name);
+    }
 }
