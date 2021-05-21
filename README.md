@@ -39,3 +39,8 @@ That gives us a coverage of 100% of the methods :
 **Test coverage tools** helps identify gaps in test coverage by indicating the percentage of methods and line that have been taken into consideration in the tests
 The coverage tool indicates which methods are correctly tested or not, and allows the developer to do not forget to test any part of code
 
+
+## Test driven development
+
+**Test driven development** desribes an iterative and incremental way of developing a project. The code is not oriented on the functional part itself but on the tests, that are written at the same time or prior to the functional code, and that allow the developer to work around it and have a precise idea of what the code should do and not do.
+For example, the commit c7ea35132ed357df87b25a7fce414e62e99015b8 (https://github.com/LsGiraffe/SQA-FinalAssignment/commit/c7ea35132ed357df87b25a7fce414e62e99015b8) of the project, that implement every calculation function, shows that every caculation methodhad its own test method. 100% of the methods have an associated unit tests.
