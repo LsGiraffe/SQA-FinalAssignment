@@ -51,4 +51,16 @@ class ControllerTest {
         assertEquals("Louis", controller._rubrics.get(0)._criterions.get(0)._studentGrades.get(0)._studentName);
         assertEquals(10, controller._rubrics.get(0)._criterions.get(0)._studentGrades.get(0)._grade);
     }
+
+    @org.junit.jupiter.api.Test
+    void getRubricGrades() throws Exception {
+        controller.addRubric("Rubric1");
+        controller.addCriterion("Rubric1", new Criterion("Criterion"));
+        controller.createNewStudentGrade("Rubric1", "Criterion", "Louis", 20);
+        controller.createNewStudentGrade("Rubric1", "Criterion", "Obama", 10);
+        List<StudentGrade> grades = controller.getAllGrades("Rubric1");
+        assertEquals(2, grades.size());
+        assertEquals("Louis", grades.get(0)._studentName);
+        assertEquals("Obama", grades.get(1)._studentName);
+    }
 }

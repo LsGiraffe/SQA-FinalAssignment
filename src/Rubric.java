@@ -29,4 +29,17 @@ public class Rubric {
             throw new Exception("Criterion not found");
         }
     }
+
+    public List<StudentGrade> getGrades() throws Exception {
+        if (_criterions.size() == 0) {
+            throw new Exception("No criterion found");
+        }
+        List<StudentGrade> grades = new ArrayList<>();
+        for (Criterion crit : _criterions) {
+            for (StudentGrade grd : crit._studentGrades) {
+                grades.add(grd);
+            }
+        }
+        return (grades);
+    }
 }

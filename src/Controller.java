@@ -52,4 +52,22 @@ public class Controller {
             throw new Exception("Rubric not found");
         }
     }
+
+    public List<StudentGrade> getAllGrades(String rubric) throws Exception {
+        if (_rubrics.size() == 0) {
+            throw new Exception("No rubric found");
+        }
+        List<StudentGrade> grades = null;
+        boolean found = false;
+        for (Rubric value : _rubrics) {
+            if (rubric.equals(value._name)) {
+                grades = value.getGrades();
+                found = true;
+            }
+        }
+        if (!found) {
+            throw new Exception("Rubric not found");
+        }
+        return (grades);
+    }
 }
